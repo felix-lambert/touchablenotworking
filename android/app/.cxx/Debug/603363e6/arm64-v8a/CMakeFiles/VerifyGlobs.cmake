@@ -69,6 +69,7 @@ endif()
 # LIB_CUSTOM_SRCS at /Users/felixlambert/Desktop/projects/emptymyfridge/touchableNotWorking/node_modules/react-native-screens/android/src/main/jni/CMakeLists.txt:21 (file)
 file(GLOB NEW_GLOB LIST_DIRECTORIES true "/Users/felixlambert/Desktop/projects/emptymyfridge/touchableNotWorking/node_modules/react-native-screens/android/src/main/jni/../../../../common/cpp/react/renderer/components/rnscreens/*.cpp")
 set(OLD_GLOB
+  "/Users/felixlambert/Desktop/projects/emptymyfridge/touchableNotWorking/node_modules/react-native-screens/android/src/main/jni/../../../../common/cpp/react/renderer/components/rnscreens/RNSModalScreenShadowNode.cpp"
   "/Users/felixlambert/Desktop/projects/emptymyfridge/touchableNotWorking/node_modules/react-native-screens/android/src/main/jni/../../../../common/cpp/react/renderer/components/rnscreens/RNSScreenShadowNode.cpp"
   "/Users/felixlambert/Desktop/projects/emptymyfridge/touchableNotWorking/node_modules/react-native-screens/android/src/main/jni/../../../../common/cpp/react/renderer/components/rnscreens/RNSScreenState.cpp"
   )

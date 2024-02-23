@@ -1,11 +1,10 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { Image } from "expo-image";
-import { LinearGradient } from "expo-linear-gradient";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import React from "react";
 
-function HomeScreen() {
+function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <Text style={{ fontSize: 22, marginTop: 15, color: "#fff" }}>
@@ -15,10 +14,11 @@ function HomeScreen() {
       <TouchableOpacity
         onPressOut={() => {
           console.log("activates here");
+          navigation.navigate("Detail");
         }}
         onPress={() => {
           console.log("does not work here");
-          navigation.navigate("Details");
+          navigation.navigate("Detail");
         }}
       >
         <Text>Go to details</Text>
@@ -29,8 +29,8 @@ function HomeScreen() {
   );
 }
 
-function DetailScreen() {
-  const [increment, setIncrement] = useState(0);
+function DetailScreen({ navigation }) {
+  const [increment, setIncrement] = React.useState(0);
 
   return (
     <View style={styles.container}>
@@ -39,7 +39,12 @@ function DetailScreen() {
         onPress={() => {
           setIncrement(increment + 1);
         }}
-      />
+        onPressOut={() => {
+          setIncrement(increment + 1);
+        }}
+      >
+        <Text>Increment</Text>
+      </TouchableOpacity>
     </View>
   );
 }
